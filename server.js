@@ -5,7 +5,11 @@ const app = express();
 app.use(express.json());
 
 // "banco de dados" em memória
-const filmes = [];
+const filmes = [
+  { id: 1, titulo: "Batman", diretor: "Christopher Nolan", ano: 2008 },
+  { id: 2, titulo: "Vingadores", diretor: "Marvel", ano: 2012 },
+  { id: 3, titulo: "VnW", diretor: "Kaka e Fernanda", ano: 2026 },
+];
 
 // GET - listar todos os filmes
 app.get("/filmes", (req, res) => {
